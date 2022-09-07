@@ -18,6 +18,134 @@ html{
     scroll-behavior: smooth;
 }
 
+/* NAVBAR */
+
+body {
+    margin: 0;
+    font-family: Arial
+}
+
+.topnav {
+    overflow: hidden;
+    background-color:black;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /*box-shadow: 0px 4px 8px 0px #fdc209;*/
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.active {
+    background-color:#1E386C;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown_menu {
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dropdown_menu .dropdown_btn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown_content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown-menu:hover .dropdown_btn {
+    background-color:#fdc209;
+    color: white;
+}
+
+.dropdown_content a:hover {
+    background-color:#fdc209;
+    color: black;
+}
+
+.dropdown_menu:hover .dropdown_content {
+    display: block;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .topnav a:not(:first-child),
+    .dropdown_menu .dropdown_btn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown_menu {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown_content {
+        position: relative;
+    }
+
+    .topnav.responsive .dropdown_menu .dropdown_btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
 body{
     background-color: white;
 }
@@ -33,53 +161,6 @@ body{
     background-color:#1E386C;
 }
 
-/* HEADER */
-.logo img{
-    height: 2.5rem;
-}
-
-.header{
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 5%;
-    margin: 1.5rem 1%;
-    border-radius: 19rem;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header .navbar a{
-    margin: 1 1rem;
-    font-size: 1rem;
-    color: black;
-}
-
-.header .navbar .active , .header .navbar a:hover{
-    border-color: black;
-    padding-bottom: 0.3rem;
-}
-@media all and (min-width: 992px) {
-    .navbar{
-        color: #1E386C;
-    }
-	.navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item:hover .nav-link{
-        color: #1E386C;
-       }
-	.navbar .nav-item:hover .dropdown-menu{ display: block; }
-	.navbar .nav-item .dropdown-menu{ margin-top:0; }
-}	
-
-.header .buttons button{
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-left: 1.25rem;
-    background-color: transparent;
-}
-/* HEADER */
 
 /* HOME */
 .home{
@@ -88,7 +169,6 @@ body{
     background: url(/images/wp2590330-light-blue-background.png) no-repeat;
     background-size: cover;
     background-position: center;
-    margin-top: -7.8rem;
     display:flex;
     align-items: center;
 }
@@ -112,13 +192,14 @@ body{
 
 /* HOME */
 .motto{
+    clear: both;
     display: flex;
-    height: 6rem;
+    height: 100px;
     overflow: visible;
     width: 64%;
     margin: 0 auto;
-    margin-top: 10rem;
-    font-weight: bold;
+    margin-top: 200px;
+    font-weight: initial;
     justify-content: center;
     align-items: center;
 
@@ -149,7 +230,14 @@ body{
     margin-bottom: 24px;
     margin-top: 120px;
 }
-
+.lider{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    line-height: 32px;
+}
 .block-image img{
     display: block;
     width: 100%;
@@ -178,6 +266,11 @@ body{
     padding-top: 48px;
     display: flex;
     padding: 7%;
+}
+.info .messaging{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 .info .messaging img{
     float: left;
@@ -428,6 +521,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 2rem;
 }
 .about-us .title{
     display: block;
@@ -1174,3 +1268,323 @@ footer .copyright{
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
+
+  /* responsive */
+  @media screen and (max-width: 850px){
+    .home{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: -4rem;
+    }
+    .home .left {
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  } 
+
+  .home .content h3{
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .home .content p{
+    display: block;
+    height: auto;
+    overflow: hidden;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+  .slideshow-container{
+    width: 90%;
+    margin-left: 0;
+    margin-right: 8%;
+    margin-top: 12px;
+  }
+  .slideshow-container .mySlides{
+    float: left;
+    width: 280px;
+    height: 280px;
+    margin-left: calc((100% - 240px) / 2);
+  }
+  .motto{
+    margin-top: 4rem;
+    margin-bottom: 12px;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+  }
+  .motto-l{
+    font-size: 24px;
+    line-height: initial;
+    margin-left: 48px;
+  }
+  .motto_img{
+    width: 100px;
+    height: 100px;
+  }
+  .motto_img img{
+    width: 100px;
+    height: 100px;
+  }
+  .motto-r{
+    font-size: 24px !important;
+    line-height: initial;
+    margin-right: 48px;
+  }
+  .lider{
+    font-size: 16px;
+    line-height: 24px;
+    top: 12px;
+  }
+  .info-r{
+    flex-direction: column !important;
+  }
+  .info .messaging{
+    display: block;
+    overflow: hidden;
+    width: 264px;
+    height: 264px;
+    float: none;
+    margin: 0 auto;
+  }
+  .info .messaging img, .info .payment img{
+    width: 264px;
+    height: 264px;
+  }
+  .info .info-right, .info .info-left{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10%;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+  .info .info-right h3, .info .info-left h3, .office-title{
+    font-size: 36px;
+  }
+  .achievements{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .achievements .achievement{
+    width: 50%;
+    margin-bottom: 12px;
+    border: none;
+  }
+  .offices{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .offices .office{
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    width: 16.8rem;
+    height: 16.8rem;
+  }
+  .offices .office .name{
+    padding-left: 2rem;
+    padding-top: 0.3rem;
+  }
+  footer .container{
+    width: 100%;
+    flex-direction: column;
+  }
+  footer{
+    height: auto;
+    padding: 24px;
+  }
+  footer .section{
+    flex: 1 !important;
+    padding: 24px 12px;
+  }
+  footer .logo-white{
+    width: 171px;
+    height: 36px;
+  }
+  footer .logo-white img{
+    width: 171px;
+    height: 36px;
+  }
+  footer .gsma{
+    height: 72px;
+    margin-top: 24px;
+  }
+  footer .copyright{
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-menu-items{
+    display: flex;
+    align-items: center;
+  }
+  footer .subscribe{
+    padding-right: 0;
+  }
+  footer .abone{
+    display: block;
+    height: auto;
+    overflow: hidden;
+  }
+  .home-view .about-us, .about-us{
+    margin-top: 2rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-view .about-us-desc, .about-us-desc{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .info{
+    flex-direction: column-reverse;
+    padding-top: 7rem;
+    align-items: center;
+  }
+  .blog-posts{
+    width: calc(100% - 48px);
+    flex-direction: column;
+  }
+  .blog-posts .blog-post, .blog-post-right{
+    display: block;
+    border-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .blog-img{
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .blog-posts .blog-post .blog-content, .blog-post-right .blog-content{
+    float: none;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .tiko-services .tiko-image{
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 440px;
+    padding-left: 4rem;
+  }
+  .tiko-services .services{
+    display: block;
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  .tiko-services .services .service{
+    width: 100%;
+    text-align: center;
+  }
+  .info .payment{
+    margin-top: -6rem;
+    margin-right: 1rem;
+  }
+  .info .payment img{
+    padding-right: 2.5rem;
+  }
+  .values{
+    display: block;
+    margin-left: -1rem;
+  }
+  .project-posts{
+    padding-right: 0;
+    width: calc(100% - 24px);
+    padding-left: 24px;
+  }
+  .project-posts .project-post{
+    display: block;
+  }
+  .project-posts .project-post .project-img{
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-left: -3rem;
+  }
+  .project-posts .project-post .project-img img{
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .project-posts .project-post .project-content{
+    float: none;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .logo-title{
+    padding-top: 1rem;
+  }
+  .partners{
+    flex-direction: column;
+  }
+  .partners .partner{
+    padding-bottom: 1rem;
+  }
+  .block-gsma{
+    height: auto;
+  }
+  .block-gsma .inner-block{
+    float: none;
+    width: 100%;
+    display: block;
+    padding: 36px;
+  }
+  .block-gsma .inner-block .image-gsma{
+    width: 100%;
+  }
+  .block-gsma .inner-block .image-gsma img{
+    width: 100%;
+  }
+  .block-gsma .right .text{
+    font-size: 24px;
+    line-height: 28px;
+    width: 100%;
+    margin-top: 0;
+  }
+  .references{
+    padding: 24px;
+  }
+  .references .reference{
+    width: 49%;
+  }
+  .references .reference .ref-image{
+    width: 100%;
+  }
+  .references .reference .ref-image{
+    width: 100% !important;
+  }
+  .view{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .contacts{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contacts .contact{
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+}

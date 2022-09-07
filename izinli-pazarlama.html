@@ -10,76 +10,81 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="style.css" type="text/css" rel="stylesheet" />
-    <title>Home</title>
+    <title>izinli-pazarlama</title>
 </head>
 
 <body >
-    <header class="header">
-        <a href="home.html" class="logo">
-            <img src="images/logo.png" alt="logo">
+    <div class="topnav" id="myTopnav">
+        <a href="home.html" class="active">
+            <img style="height: 1.25rem;" src="images/logo-white.png" alt="">
         </a>
-        <div class="center">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="main_nav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link  dropdown-toggle" href="mesajlasma-servisleri.html" style="cursor: pointer;" data-bs-toggle="dropdown"> Mesajlaşma Servisleri </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="toplu-sms.html"> Toplu SMS</a></li>
-                                    <li><a class="dropdown-item" href="toplu-mms.html"> Toplu MMS </a></li>
-                                    <li><a class="dropdown-item" href="toplu-eposta.html"> Toplu E-Posta </a></li>
-                                    <li><a class="dropdown-item" href="cift-yonlu-sms.html"> Çift Yönlü SMS</a></li>
-                                    <li><a class="dropdown-item" href="anket.html"> Anket</a></li>
-                                    <li><a class="dropdown-item" href="izinli-pazarlama.html"> İzinli Pazarlama</a></li>
-                                </ul>
-                            </li>
-    
-                            <li class="nav-item dropdown">
-                                <a class="nav-link  dropdown-toggle" href="odeme-sistemleri.html" style="cursor: pointer;" data-bs-toggle="dropdown"> Ödeme Sistemleri </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="tiko-cuzdan.html"> Tiko Cüzdan</a></li>
-                                    <li><a class="dropdown-item" href="tiko-sanal-pos.html
-                                        "> Tiko Sanal POS </a></li>
-                                    <li><a class="dropdown-item" href="tiko-taksit.html"> Tiko Taksit </a></li>
-                                    <li><a class="dropdown-item" href="tiko-link.html"> Tiko Link</a></li>
-                                </ul>
-                            </li>
-    
-                            <li class="nav-item dropdown">
-                                <a class="nav-link  dropdown-toggle" style="cursor: pointer;" data-bs-toggle="dropdown"> Şirket </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="hakkimizda.html"> Hakkımızda </a></li>
-                                    <li><a class="dropdown-item" href="medya-merkezi.html"> Medya Merkezi </a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="ortaklarimiz.html"> İş Ortaklarımız </a> </li>
-                            <li class="nav-item"><a class="nav-link" href="referanslar.html"> Referanslar </a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link  dropdown-toggle" style="cursor: pointer;" data-bs-toggle="dropdown"> İletişim </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="yurt-ici.html"> Yurt İçi </a></li>
-                                    <li><a class="dropdown-item" href="yurt-disi.html"> Yurt Dışı </a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div> <!-- navbar-collapse.// -->
-                </div> <!-- container-fluid.// -->
-            </nav>
+        <div class="dropdown_menu">
+            <button onClick="location.href='mesajlasma-servisleri.html'" class="dropdown_btn">Mesajlaşma Servisleri 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown_content">
+                <a href="toplu-sms.html">Toplu SMS</a>
+                <a href="toplu-mms.html">Toplu MMS</a>
+                <a href="toplu-eposta.html">Toplu E-Posta</a>
+                <a href="cift-yonlu-sms.html">Çift Yönlü SMS</a>
+                <a href="anket.html">Anket</a>
+                <a href="izinli-pazarlama.html">İzinli Pazarlama</a>
+            </div>
         </div>
-       
-    </header>
 
-    <div class="info" style="margin-top: -5rem;">
+        <div class="dropdown_menu">
+            <button onClick="location.href='odeme-sistemleri.html'" class="dropdown_btn">Ödeme Sistemleri
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown_content">
+                <a href="tiko-cuzdan.html">Tiko Cüzdan</a>
+                <a href="tiko-sanal-pos.html">Tiko Sanal POS</a>
+                <a href="tiko-taksit.html">Tiko Taksit</a>
+                <a href="tiko-link.html">Tiko Link</a>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <button class="dropdown_btn">Şirket
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown_content">
+                <a href="hakkimizda.html">Hakkımızda</a>
+                <a href="medya-merkezi.html">Medya</a>
+            </div>
+        </div>
+        <a href="ortaklarimiz.html">İş Ortaklarımız</a>
+        <a href="referanslar.html">Referanslar</a>
+
+        <div class="dropdown_menu">
+            <button class="dropdown_btn">İletişim
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown_content">
+                <a href="yurt-ici.html">Yurt İçi</a>
+                <a href="yurt-disi.html">Yurt Dışı</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <div class="info" style="margin-top: -2rem;">
         <div class="info-left col-md-6">
             <h3>İzinli Pazarlama</h3>
             <p>Reklam mesajının sadece izin veren bireylere gönderilmesi gerekir. <br>Bu çözüm hem elektronik olarak izin alma hem de alınan izinlerin durumunu yönetmeyi sağlar. Elektronik Ticareti düzenleme hakkında Kanun (ETK) ve Kişisel Verilerin Korunması hakkında Kanun (KVKK) reklam mesajı gönderimi için bireyden izin alınması ve veri işleme onayı alınmasını zorunlu kılar.</p>
