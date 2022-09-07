@@ -379,7 +379,6 @@ body{
     color:#1E386C;
     display: block;
     height: auto;
-    overflow: hidden;
     line-height: 56px;
     text-align: center;
     margin-bottom: 48px;
@@ -1301,10 +1300,9 @@ footer .copyright{
     font-size: 16px;
   }
   .slideshow-container{
-    width: 90%;
     margin-left: 0;
     margin-right: 8%;
-    margin-top: 12px;
+    margin-top: 48px;
   }
   .slideshow-container .mySlides{
     float: left;
@@ -1494,7 +1492,7 @@ footer .copyright{
     text-align: center;
   }
   .info .payment{
-    margin-top: -6rem;
+    margin-top: -5rem;
     margin-right: 1rem;
   }
   .info .payment img{
